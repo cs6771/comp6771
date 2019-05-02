@@ -1,0 +1,2 @@
+build --copt='-Werror' --copt='-pedantic' --copt='-Wall' --copt='-Wextra'
+test --test_output=errors

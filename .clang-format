@@ -1,0 +1,19 @@
+﻿---
+AccessModifierOffset: '-2'
+AllowShortFunctionsOnASingleLine: Inline
+AlwaysBreakTemplateDeclarations: 'true'
+BinPackParameters: 'false'
+ColumnLimit: '100'
+ConstructorInitializerIndentWidth: '2'
+ContinuationIndentWidth: '4'
+IndentWidth: '2'
+Language: Cpp
+MaxEmptyLinesToKeep: '1'
+NamespaceIndentation: None
+PointerAlignment: Left
+SpaceBeforeParens: ControlStatements
+SpacesBeforeTrailingComments: '2'
+Standard: Cpp11
+TabWidth: '2'
+
+...
