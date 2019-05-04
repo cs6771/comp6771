@@ -1,5 +1,6 @@
 #include <iostream>
-#include "lectures/week1/factorial_lib.h"
+
+#include "lectures/week1/factorial.h"
 
 int main() {
   std::cout << "Enter a number: ";
