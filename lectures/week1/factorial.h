@@ -1,6 +1,7 @@
-#ifndef TUTORIALS_WEEK1_FACTORIAL_H
-#define TUTORIALS_WEEK1_FACTORIAL_H
+#ifndef LECTURES_WEEK1_FACTORIAL_H_
+#define LECTURES_WEEK1_FACTORIAL_H_
 
 int factorial(int number);
 
-#endif
+#endif  // LECTURES_WEEK1_FACTORIAL_H_
+
