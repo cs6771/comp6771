@@ -30,3 +30,17 @@ Should be preinstalled. Version should be gcc 8. Needs to support C++17.
 Things you may want to modify on the VM:
 * Enable ideavim
 
+# Other (unsupported) options
+
+## Using Clang-Tools outside of CLion
+
+To use tools such as `clang-tidy`, `clang-format` outside of CLion, 
+or to use alternative IDEs relying on tools such as `clangd` or `rtags`, 
+you will need a compilation database. To set one up, just run
+
+    ./gen_compile_commands.sh
+
+from inside the repository directory,
+which should result in a `compile_commands.json` file in the root of the project.
+
+This should work on most POSIX systems, but it needs bash to run.

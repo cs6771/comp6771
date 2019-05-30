@@ -1,2 +1,3 @@
 .clwb/
 bazel-*
+compile_commands.json
