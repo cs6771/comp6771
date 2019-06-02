@@ -1,5 +1,9 @@
 # Option 1: Use my virtual machine (supported)
-Download my virtual machine I've created for you. It has everything set up. Run it with virtualbox. The password is "comp6771".
+* Install virtualbox
+* Download my virtual machine I've created for you. It has everything set up. Run it with virtualbox. The password is "comp6771".
+* In virtualbox, file > import appliance > the file you downloaded. Make sure you set the CPU and RAM to something appropriate for your machine.
+* Run `chmod a+x ~/.CLion2019.*/config/plugins/clwb/gdb/gdbserver`
+* Restore [my settings](tiny.cc/comp6771clionsettings) (file > import settings)
 
 # Option 2: Install the same configuration as the virtual machine (somewhat supported)
 We *may* help you with this, depending on how much work it is, or we may tell you to just use the VM.
@@ -8,18 +12,17 @@ We *may* help you with this, depending on how much work it is, or we may tell yo
 ## Clion (optional, but recommended)
 We will be using clion during the lectures. Use a different IDE or editor if you prefer, but do so at your own risk.
 
-Download and install clion 2018.3.4 (bazel plugin doesn’t support newer versions) from [jetbrains website](https://www.jetbrains.com/clion/download/previous.html). Sign up using your student email to get a free copy.
+Download and install clion from [jetbrains website](https://www.jetbrains.com/clion/download/). Sign up using your student email to get a free copy.
 
 ## Installing bazel
 * [Download and install bazel](https://docs.bazel.build/versions/master/install-ubuntu.html)
 * Install bazel plugin for clion
   * Configure > plugins
     * Install bazel, clang-tidy, and clang-format.
-  * If they don't appear, make sure you have clion 2018.3.4 installed and not a newer version.
 * Restart clion
 * Settings > bazel settings > bazel binary > set location to your bazel you downloaded
-* Run `chmod a+x ~/.CLion2018.3/config/plugins/clwb/gdb/gdbserver`
-* Restore my settings (file > import settings)
+* Run `chmod a+x ~/.CLion2019.*/config/plugins/clwb/gdb/gdbserver`
+* Restore [my settings](tiny.cc/comp6771clionsettings) (file > import settings)
 
 
 ## C++ Compiler
