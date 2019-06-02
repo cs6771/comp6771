@@ -5,15 +5,19 @@
 #include <iterator>
 #include <sstream>
 
-// TODO(tutors): Discuss how the use of istream instead of ifstream improves ease of testing.
 std::vector<std::string> to_word_list(std::istream& input) {
   std::vector<std::string> word_list;
+  std::copy(std::istream_iterator<std::string>{input}, std::istream_iterator<std::string>{},
+            std::back_inserter(word_list));
   return word_list;
 }
 
-// We only ever pass std::cin and std::cout to input and output respectively.
-// TODO(tutors): Discuss why we don't just use std::cin and std::cout with respect to testing.
 void print_valid_words(const std::vector<std::string>& valid_words,
                        std::istream& input,
                        std::ostream& output) {
+  std::copy_if(std::istream_iterator<std::string>{input}, std::istream_iterator<std::string>{},
+               std::ostream_iterator<std::string>{output, " "}, [&](const auto& word) {
+                 return std::find(valid_words.begin(), valid_words.end(), word) !=
+                        valid_words.end();
+               });
 }
