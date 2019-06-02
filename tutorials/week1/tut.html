@@ -1,0 +1,128 @@
+<html lang="en">
+<head>
+  <title>Week 1 tutorial</title>
+  <meta http-equiv="Content-Type" content="text/html; charset=windows-1252">
+</head>
+<body>
+  <div style="margin: 20px;">
+
+  <h1>Tutorial - Week 1</h1>
+
+  <b>Tutorial subject to change</b>
+
+  <hr>
+
+  <h3>Question 0</h3>
+
+  Your tutor will take some time to get to you, and for you to get to know them.
+
+  <hr>
+
+  <h3>Question 1</h3>
+
+  Write a program addnumbers.cpp that reads in two integers and prints out the sum of them. It's behaviour should follow:
+
+  <pre>$ ./prog
+Please enter two numbers: 2 3
+Sum: 5
+  </pre>
+
+  <hr>
+
+  <h3>Question 2</h3>
+
+  Write a program in C++, cat.cpp, equivalent to the below C program? For each change, what advantages does C++ provide?
+  <pre><code>
+int main() {
+  char buffer[100];
+  fgets(buffer, 100, stdin);
+  printf("%s\n", buffer);
+  return 0;
+}
+
+</code></pre>
+
+  <hr>
+
+  <h3>Question 3</h3>
+
+  Which parts of this program are declarations and which parts are definitions?
+
+  <pre><code>
+#include &lt;iostream&gt;
+#include &lt;string&gt;
+
+int getAge();
+
+int main() {
+  std::string name;
+  name = "Hayden";
+  std::cout &lt;&lt; name &lt;&lt; " is " &lt;&lt; getAge() &lt;&lt; "\n";
+  return 0;
+}
+
+int getAge() {
+  return 24;
+}
+</code></pre>
+
+  <hr>
+
+  <h3>Question 4</h3>
+
+  Do any of the following have errors? If so, what are they?
+
+  <ol>
+    <li>
+  <pre><code>
+int i = 3;
+i = 4;
+  </code></pre>
+    </li>
+    <li>
+  <pre><code>
+const int j = 5;
+j--;
+  </code></pre>
+    </li>
+    <li>
+  <pre><code>
+int age = 18;
+int&amp; myAge = age;
+myAge++;
+  </code></pre>
+    </li>
+    <li>
+  <pre><code>
+int age = 21;
+const int&amp; myAge = age;
+myAge--;
+  </code></pre>
+    </li>
+  </ol>
+
+  <hr>
+
+  <h3>Question 5</h3>
+  Write a C++ program, sort3.cpp that prompts the user to enter three ints, calls an "sort3" function by reference and prints the sorted numbers.<br><br>
+
+  Starting point:
+  <pre><code>
+#include &lt;iostream&gt;
+
+void sort3(int&amp; a, int&amp; b, int&amp; c);
+
+int main() {
+  // TODO
+  // sort3(....);
+  // TODO
+  return 0;
+}
+
+void sort3(int&amp; a, int&amp; b, int&amp; c) {
+
+};
+</code></pre>
+
+</div>
+</body></html>

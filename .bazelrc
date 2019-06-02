@@ -1,2 +1,2 @@
-build --copt='-Werror' --copt='-pedantic' --copt='-Wall' --copt='-Wextra'
+build --copt='-Werror' --copt='-pedantic' --copt='-Wall' --copt='-Wextra' --copt='-std=c++17'
 test --test_output=errors
