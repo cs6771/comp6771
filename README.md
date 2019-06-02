@@ -1,6 +1,6 @@
-# Option 1: Use my virtual machine (supported)
+# Option 1: Use our virtual machine (supported)
 * Install virtualbox
-* Download my virtual machine I've created for you. It has everything set up. Run it with virtualbox. The password is "comp6771".
+* Download our virtual machine we've created for you. It has everything set up. Run it with virtualbox. The password is "comp6771".
 * In virtualbox, file > import appliance > the file you downloaded. Make sure you set the CPU and RAM to something appropriate for your machine.
 * Run `chmod a+x ~/.CLion2019.*/config/plugins/clwb/gdb/gdbserver`
 * Restore [my settings](http://tiny.cc/comp6771clionsettings) (file > import settings)
