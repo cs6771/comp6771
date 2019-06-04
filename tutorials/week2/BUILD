@@ -1,6 +1,7 @@
 cc_binary(
     name = "dictionary",
     srcs = ["dictionary.cpp"],
+    data = ["//data:words"],
     deps = [":dictionary_library"],
 )
 
