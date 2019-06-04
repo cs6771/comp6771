@@ -7,5 +7,5 @@
 
 int main() {
   std::ifstream word_list_file = std::ifstream{"data/words.txt"};
-  print_valid_words(to_word_list(word_list_file), std::cin, std::cout);
+  PrintValidWords(ToWordList(word_list_file), std::cin, std::cout);
 }

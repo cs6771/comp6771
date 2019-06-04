@@ -6,5 +6,5 @@ int main() {
   std::cout << "Enter a number: ";
   int n;
   std::cin >> n;
-  std::cout << factorial(n) << '\n';
+  std::cout << Factorial(n) << '\n';
 }

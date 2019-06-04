@@ -5,7 +5,7 @@
 #include <string>
 
 // Later on in semester we will learn about exceptions. But for now, we just exit on failure.
-void error(const std::string& message);
+void Error(const std::string& message);
 
 const std::set<std::string> GetLexicon(const std::string& filename);
 
