@@ -2,6 +2,7 @@ cc_library(
     name = "factorial_lib",
     srcs = ["factorial.cpp"],
     hdrs = ["factorial.h"],
+    deps = [],
 )
 
 cc_binary(

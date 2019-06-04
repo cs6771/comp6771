@@ -1,11 +1,11 @@
+#include "assignments/wl/lexicon.h"
+
 #include <algorithm>
 #include <cstdlib>
 #include <fstream>
 #include <iostream>
 #include <iterator>
 #include <set>
-
-#include "assignments/wl/lexicon.h"
 
 void Error(const std::string& message) {
   std::cout << message << std::endl;
