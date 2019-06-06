@@ -8,7 +8,7 @@ cc_library(
 cc_binary(
     name = "main",
     srcs = ["main.cpp"],
-    data = ["//data:words"],
+    data = ["words.txt"],
     deps = [
         ":lexicon",
         ":word_ladder",
