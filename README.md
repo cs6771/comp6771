@@ -1,38 +1,38 @@
 # Option 1: Use our virtual machine (supported)
-* Install virtualbox
+* Install virtualbox (exact installation instructions depend on your OS)
 * [Download our virtual machine](http://tiny.cc/comp6771vm) we've created for you. It has everything set up. Run it with virtualbox. The password is "comp6771".
 * In virtualbox, file > import appliance > the file you downloaded. Make sure you set the CPU and RAM to something appropriate for your machine.
 * Run `chmod a+x ~/.CLion2019.*/config/plugins/clwb/gdb/gdbserver`
 * Restore [the settings](http://tiny.cc/comp6771clionsettings) (file > import settings)
+* Modify the line starting with "url" in ~/Documents/6771/.git/config
+```
+#url = git@github.com:cs6771/comp6771     # Old
+url = https://github.com/cs6771/comp6771  # New
+```
 
-# Option 2: Install the same configuration as the virtual machine (somewhat supported)
+# Option 2: Linux - Install the same configuration as the virtual machine (somewhat supported)
 We *may* help you with this, depending on how much work it is, or we may tell you to just use the VM.
 `sudo apt install clang-format`
 
-## Clion (optional, but recommended)
+## Installing Bazel
+* [Download and install bazel](https://docs.bazel.build/versions/master/install-ubuntu.html)
+* Ensure that are using gcc version 8 (supporting C++17).
+
+## Installing and configuring Clion (optional, but recommended)
 We will be using clion during the lectures. Use a different IDE or editor if you prefer, but do so at your own risk.
 
 Download and install clion from [jetbrains website](https://www.jetbrains.com/clion/download/). Sign up using your student email to get a free copy.
 
-## Installing bazel
-* [Download and install bazel](https://docs.bazel.build/versions/master/install-ubuntu.html)
-* Install bazel plugin for clion
-  * Configure > plugins
-    * Install bazel, clang-tidy, and clang-format.
+After that is complete:
+
+* Open Clion
+* Clion menu: Configure > plugins
+  * Install bazel, clang-tidy, and clang-format.
 * Restart clion
-* Settings > bazel settings > bazel binary > set location to your bazel you downloaded
+* Clion menu: Configure > settings > bazel settings > bazel binary > set location to your bazel you downloaded and installed (likely /usr/bin/bazel)
+* Restore [my settings](http://tiny.cc/comp6771clionsettings) (Clion: File > import settings)
 * Run `chmod a+x ~/.CLion2019.*/config/plugins/clwb/gdb/gdbserver`
-* Restore [my settings](http://tiny.cc/comp6771clionsettings) (file > import settings)
-
-
-## C++ Compiler
-Should be preinstalled. Version should be gcc 8. Needs to support C++17.
-
-# Importing the project
-* File > import bazel project > course repository
-
-Things you may want to modify on the VM:
-* Enable ideavim
+* To import the project, (Clion: File > import bazel project > course repository)
 
 # Option 3 (completely unsupported)
 
