@@ -11,7 +11,7 @@
 url = https://github.com/cs6771/comp6771  # New
 ```
 
-# Option 2: Linux - Install the same configuration as the virtual machine (somewhat supported)
+# Option 2: Linux - Install the same configuration as the virtual machine (mostly supported)
 We *may* help you with this, depending on how much work it is, or we may tell you to just use the VM.
 
 ## Required Installations
