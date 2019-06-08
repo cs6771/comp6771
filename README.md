@@ -4,6 +4,7 @@
 * In virtualbox, file > import appliance > the file you downloaded. Make sure you set the CPU and RAM to something appropriate for your machine.
 * Run `chmod a+x ~/.CLion2019.*/config/plugins/clwb/gdb/gdbserver`
 * Restore [the settings](http://tiny.cc/comp6771clionsettings) (file > import settings)
+* [Create a jetbrains account](https://www.jetbrains.com/shop/eform/students) (username/password) for free to obtain a Clion license
 * Modify the line starting with "url" in ~/Documents/6771/.git/config
 ```
 #url = git@github.com:cs6771/comp6771     # Old
