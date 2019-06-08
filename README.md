@@ -12,9 +12,10 @@ url = https://github.com/cs6771/comp6771  # New
 
 # Option 2: Linux - Install the same configuration as the virtual machine (somewhat supported)
 We *may* help you with this, depending on how much work it is, or we may tell you to just use the VM.
-`sudo apt install clang-format`
 
-## Installing Bazel
+## Required Installations
+* Install clang-format
+  * `sudo apt install clang-format`
 * [Download and install bazel](https://docs.bazel.build/versions/master/install-ubuntu.html)
 * Ensure that are using gcc version 8 (supporting C++17).
 
@@ -26,13 +27,18 @@ Download and install clion from [jetbrains website](https://www.jetbrains.com/cl
 After that is complete:
 
 * Open Clion
-* Clion menu: Configure > plugins
+* Configure plugins
+  * Clion menu: Configure > plugins
   * Install bazel, clang-tidy, and clang-format.
 * Restart clion
-* Clion menu: Configure > settings > bazel settings > bazel binary > set location to your bazel you downloaded and installed (likely /usr/bin/bazel)
-* Restore [my settings](http://tiny.cc/comp6771clionsettings) (Clion: File > import settings)
+* Configure Clion for Bazel
+  * Clion menu: Configure > settings > bazel settings > bazel binary
+  * Set location to your bazel you downloaded and installed (likely /usr/bin/bazel)
+* Restore [my settings](http://tiny.cc/comp6771clionsettings)
+  * Clion menu: File > import settings
 * Run `chmod a+x ~/.CLion2019.*/config/plugins/clwb/gdb/gdbserver`
-* To import the project, (Clion: File > import bazel project > course repository)
+* Import your project:
+  * Clion menu: File > import bazel project > course repository
 
 # Option 3 (completely unsupported)
 
