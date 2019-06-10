@@ -50,8 +50,8 @@ import re
 import sre_compile
 import string
 import sys
-import unicodedata
 import sysconfig
+import unicodedata
 
 try:
   xrange          # Python 2
@@ -4492,10 +4492,7 @@ def _ClassifyInclude(fileinfo, include, is_system):
   is_cpp_h = include in _CPP_HEADERS
 
   if is_system:
-    if is_cpp_h:
-      return _CPP_SYS_HEADER
-    else:
-      return _C_SYS_HEADER
+    return _CPP_SYS_HEADER
 
   # If the target file and the include we're checking share a
   # basename when we drop common extensions, and the include
