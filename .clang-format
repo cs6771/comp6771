@@ -1,5 +1,5 @@
 ﻿---
-AccessModifierOffset: '-2'
+AccessModifierOffset: '-1'
 AllowShortFunctionsOnASingleLine: Inline
 AlwaysBreakTemplateDeclarations: 'true'
 BinPackParameters: 'false'
