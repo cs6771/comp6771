@@ -4229,19 +4229,19 @@ def CheckCheck(filename, clean_lines, linenum, error):
   lhs = lhs.strip()
   rhs = rhs.strip()
   match_constant = r'^([-+]?(\d+|0[xX][0-9a-fA-F]+)[lLuU]{0,3}|".*"|\'.*\')$'
-  if Match(match_constant, lhs) or Match(match_constant, rhs):
-    # Note: since we know both lhs and rhs, we can provide a more
-    # descriptive error message like:
-    #   Consider using CHECK_EQ(x, 42) instead of CHECK(x == 42)
-    # Instead of:
-    #   Consider using CHECK_EQ instead of CHECK(a == b)
-    #
-    # We are still keeping the less descriptive message because if lhs
-    # or rhs gets long, the error message might become unreadable.
-    error(filename, linenum, 'readability/check', 2,
-          'Consider using %s instead of %s(a %s b)' % (
-              _CHECK_REPLACEMENT[check_macro][operator],
-              check_macro, operator))
+  # if Match(match_constant, lhs) or Match(match_constant, rhs):
+  #   # Note: since we know both lhs and rhs, we can provide a more
+  #   # descriptive error message like:
+  #   #   Consider using CHECK_EQ(x, 42) instead of CHECK(x == 42)
+  #   # Instead of:
+  #   #   Consider using CHECK_EQ instead of CHECK(a == b)
+  #   #
+  #   # We are still keeping the less descriptive message because if lhs
+  #   # or rhs gets long, the error message might become unreadable.
+  #   error(filename, linenum, 'readability/check', 2,
+  #         'Consider using %s instead of %s(a %s b)' % (
+  #             _CHECK_REPLACEMENT[check_macro][operator],
+  #             check_macro, operator))
 
 
 def CheckAltTokens(filename, clean_lines, linenum, error):
