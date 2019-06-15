@@ -3,7 +3,7 @@ AccessModifierOffset: '-1'
 AllowShortFunctionsOnASingleLine: Inline
 AlwaysBreakTemplateDeclarations: 'true'
 BinPackParameters: 'false'
-ColumnLimit: '100'
+ColumnLimit: '80'
 ConstructorInitializerIndentWidth: '2'
 ContinuationIndentWidth: '4'
 IndentWidth: '2'
