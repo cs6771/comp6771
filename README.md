@@ -75,11 +75,10 @@ After that is complete:
 ### Running
 * Open terminal
 * Navigate to the root of the repository
-* Go to `./bazel-bin/{$path_to_executable_dir}` and run the appropriate binary 
 * Example: 
   ```bash
-    cd ./bazel-bin/lectures/week1
-    ./factorial
+    bazel build //lectures/week1:factorial
+    ./bazel-bin/lectures/week1/factorial
   ```
 
 ### Debugging
