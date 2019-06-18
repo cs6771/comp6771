@@ -12,3 +12,9 @@ cc_library(
     hdrs = ["bookstore.h"],
     deps = [],
 )
+
+cc_binary(
+    name = "constructors",
+    srcs = ["constructors.cpp"],
+    deps = [],
+)
