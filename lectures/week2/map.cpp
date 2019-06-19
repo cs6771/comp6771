@@ -1,6 +1,7 @@
 #include <iostream>
 #include <map>
 #include <string>
+#include <utility>
 
 int main() {
   std::map<std::string, double> m;
@@ -16,7 +17,7 @@ int main() {
   // This is very dangerous, and one of the most common causes of mistakes in C++.
   std::cout << m["bat"] << '\n';
 
-  auto it = m.find("bat"); // Iterator to bat if present, otherwise m.end()
+  auto it = m.find("bat");  // Iterator to bat if present, otherwise m.end()
 
   // This is a great example of when to use auto, but we want to show you what type it is.
   for (const std::pair<const std::string, double>& kv : m) {

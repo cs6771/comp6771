@@ -9,8 +9,8 @@ int main() {
   while (std::cin >> input) {
     numbers.push_back(input);
   }
-  std::cout << "1st element: " << numbers.at(0) << "\n"; // slower, safer
-  std::cout << "2nd element: " << numbers[1] << "\n"; // faster, less safe
+  std::cout << "1st element: " << numbers.at(0) << "\n";  // slower, safer
+  std::cout << "2nd element: " << numbers[1] << "\n";  // faster, less safe
   std::cout << "Max size before realloc: " << numbers.capacity() << "\n";
   for (int n : numbers) {
     std::cout << n << "\n";
