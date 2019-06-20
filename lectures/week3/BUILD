@@ -18,3 +18,19 @@ cc_binary(
     srcs = ["constructors.cpp"],
     deps = [],
 )
+
+cc_library(
+    name = "intarray",
+    srcs = ["intarray.cpp"],
+    hdrs = ["intarray.h"],
+    deps = [],
+)
+
+cc_binary(
+    name = "intarray_test",
+    srcs = ["intarray_test.cpp"],
+    deps = [
+        ":intarray",
+        "//:catch",
+    ],
+)
