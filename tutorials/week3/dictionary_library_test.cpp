@@ -1,5 +1,5 @@
 #include "catch.h"
-#include "tutorials/week2/dictionary_library.h"
+#include "tutorials/week3/dictionary_library.h"
 
 // TODO(tutorial): Discuss why we write this function here, and why we shouldn't just have it in our
 //  program.
