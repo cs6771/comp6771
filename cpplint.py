@@ -53,6 +53,11 @@ import sys
 import sysconfig
 import unicodedata
 
+if sys.version_info[0] != 2:
+    sys.stderr.write("cpplint.py needs to be run with Python 2, try running "
+                     "'python2 %s' instead\n" % sys.argv[0])
+    sys.exit(1)
+
 try:
   xrange          # Python 2
 except NameError:
