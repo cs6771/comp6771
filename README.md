@@ -1,4 +1,66 @@
-# Option 1: Use our virtual machine (supported)
+# Required steps
+
+## Step 1 (Operating system dependent)
+
+### Linux
+* Open a terminal
+* Install Bazel
+  ```bash
+    cd ~/Downloads
+    wget https://github.com/bazelbuild/bazel/releases/download/0.27.0/bazel_0.27.0-linux-x86_64.deb
+    sudo dpkg -i ./https://github.com/bazelbuild/bazel/releases/download/0.27.0/bazel_0.27.0-linux-x86_64.deb
+    bazel --version # Testing if bazel works
+  ```
+
+### Windows
+* If you haven't already, install a debian-based WSL for Windows
+  * E.G. https://www.microsoft.com/en-au/p/ubuntu-1804-lts/9n9tngvndl3q?rtc=1&activetab=pivot:overviewtab
+* Go to the start menu and open "Ubuntu". You will be given a terminal.
+* Install Bazel
+  ```bash
+    cd ~/Downloads
+    wget https://github.com/bazelbuild/bazel/releases/download/0.27.0/bazel_0.27.0-linux-x86_64.deb
+    sudo dpkg -i ./https://github.com/bazelbuild/bazel/releases/download/0.27.0/bazel_0.27.0-linux-x86_64.deb
+    bazel --version # Testing if bazel works
+  ```
+
+### Mac OSX
+* Install Bazel
+  ```bash
+    cd ~/Downloads
+    wget https://github.com/bazelbuild/bazel/releases/download/0.27.0/bazel_0.27.0-linux-x86_64.deb
+    sudo dpkg -i ./https://github.com/bazelbuild/bazel/releases/download/0.27.0/bazel_0.27.0-linux-x86_64.deb
+    bazel --version # Testing if bazel works
+  ```
+
+## Steps 2-5 (All operating systems)
+* Step 2: Clone the repository
+  ```bash
+    git clone https://github.com/cs6771/comp6771 ~/comp6771
+  ```  
+
+* Step 3: Install clang-tools
+  ```bash
+    sudo apt install clang-tools
+    clang-format -i ~/comp6771/lectures/week1/factorial.cpp # Testing if it works
+  ```  
+
+* Step 4: Test you can build & run your code
+  ```bash
+    bazel build //assignments/wl:main
+    bazel run //assignments/wl:main # Option 1
+    ./bazel-bin/assignments/wl/word_ladder_test # Option 2
+  ```  
+
+* Step 5: Test you can build & run your tests
+```bash
+    bazel build //assignments/wl:word_ladder_test
+    ./bazel-bin/assignments/wl/word_ladder_test
+  ```  
+
+# Optional (Setting up an IDE)
+
+## Option 1: CLion - via the provided Virtual Machine
 * Install virtualbox (exact installation instructions depend on your OS)
 * [Download our virtual machine](http://tiny.cc/comp6771vm) we've created for you. It has everything set up. Run it with virtualbox. The password is "comp6771".
 * In virtualbox, file > import appliance > the file you downloaded. Make sure you set the CPU and RAM to something appropriate for your machine.
@@ -14,13 +76,7 @@ url = https://github.com/cs6771/comp6771  # New
 # Option 2: Linux - Install the same configuration as the virtual machine (mostly supported)
 We *may* help you with this, depending on how much work it is, or we may tell you to just use the VM.
 
-## Required Installations
-* Install clang-format
-  * `sudo apt install clang-format`
-* [Download and install bazel](https://docs.bazel.build/versions/master/install-ubuntu.html)
-* Ensure that are using gcc version 8 (supporting C++17).
-
-## Installing and configuring Clion (optional, but recommended)
+## Option 2: CLion - Linux 
 We will be using clion during the lectures. Use a different IDE or editor if you prefer, but do so at your own risk.
 
 Download and install clion from [jetbrains website](https://www.jetbrains.com/clion/download/). Sign up using your student email to get a free copy.
@@ -41,12 +97,12 @@ After that is complete:
 * Import your project:
   * Clion menu: File > import bazel project > course repository
 
-# Option 3 (completely unsupported)
+## Option 3: VSCode - Mac OSX
+* We do not have any formal support or info for setting up an IDE with OSX.
+* Please try and follow the general approach of the windows instructions below
 
-## Windows 10
-* Make sure that you have the 19H1 update installed
-  * Might work on older version, but you need to transform linux paths to windows paths
-  * Tested using the Ubuntu distro for WSL
+## Option 4: VSCode - Windows
+
 ### Setting Up Environment
 * Install Visual Studio Code - Insiders
 * Install these VS Code Extensions:
@@ -148,7 +204,7 @@ After that is complete:
   }
   ```
   
-## Using Clang-Tools outside of CLion
+### Using Clang-Tools outside of CLion
 
 To use tools such as `clang-tidy`, `clang-format` outside of CLion, 
 or to use alternative IDEs relying on tools such as `clangd` or `rtags`, 
