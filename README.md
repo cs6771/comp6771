@@ -38,7 +38,7 @@
 ```
 * Ensure GDB is installed
 ```bash
-  brewinstall gdb
+  brew install gdb
   gdb --version
 ```
 
