@@ -6,10 +6,8 @@
 * Open a terminal
 * Install Bazel
 ```bash
-  cd ~/Downloads
-  wget https://github.com/bazelbuild/bazel/releases/download/0.27.0/bazel_0.27.0-linux-x86_64.deb
-  sudo dpkg -i ./https://github.com/bazelbuild/bazel/releases/download/0.27.0/bazel_0.27.0-linux-x86_64.deb
-  bazel --version # Testing if bazel works
+  sudo apt-get install bazel
+  bazel version # Testing if bazel works
 ```
 
 ### Windows
@@ -18,17 +16,15 @@
 * Go to the start menu and open "Ubuntu". You will be given a terminal.
 * Install Bazel
 ```bash
-  cd ~/Downloads
-  wget https://github.com/bazelbuild/bazel/releases/download/0.27.0/bazel_0.27.0-linux-x86_64.deb
-  sudo dpkg -i ./https://github.com/bazelbuild/bazel/releases/download/0.27.0/bazel_0.27.0-linux-x86_64.deb
-  bazel --version # Testing if bazel works
+  sudo apt-get install bazel
+  bazel version # Testing if bazel works
 ```
 
 ### Mac OSX
 * Install Bazel
 ```bash
   brew install bazel
-  bazel --version # Testing if bazel works
+  bazel version # Testing if bazel works
 ```
 
 ## Steps 2-5 (All operating systems)
@@ -39,7 +35,7 @@
 
 * Step 3: Install clang-tools
 ```bash
-  sudo apt install clang-tools
+  sudo apt-get install clang-tools
   clang-format -i ~/comp6771/lectures/week1/factorial.cpp # Testing if it works
 ```  
 
