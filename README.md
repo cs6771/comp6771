@@ -27,9 +27,8 @@
 ### Mac OSX
 * Install Bazel
   ```bash
-    cd ~/Downloads
-    wget https://github.com/bazelbuild/bazel/releases/download/0.27.0/bazel_0.27.0-linux-x86_64.deb
-    sudo dpkg -i ./https://github.com/bazelbuild/bazel/releases/download/0.27.0/bazel_0.27.0-linux-x86_64.deb
+    brew tap bazelbuild/tap
+    brew install bazelbuild/tap/bazel
     bazel --version # Testing if bazel works
   ```
 
