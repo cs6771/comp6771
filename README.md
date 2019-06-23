@@ -42,26 +42,26 @@
   gdb --version
 ```
 
-## Steps 3-6 (All operating systems)
-* Step 3: Clone the repository
+## Steps 2-5 (All operating systems)
+* Step 2: Clone the repository
 ```bash
   git clone https://github.com/cs6771/comp6771 ~/comp6771
 ```  
 
-* Step 5: Test you can build & run your code
+* Step 3: Test you can build & run your code
 ```bash
   bazel build //assignments/wl:main
   bazel run //assignments/wl:main # Option 1
   ./bazel-bin/assignments/wl/word_ladder_test # Option 2
 ```  
 
-* Step 6: Test you can build & run your tests
+* Step 4: Test you can build & run your tests
 ```bash
   bazel build //assignments/wl:word_ladder_test
   ./bazel-bin/assignments/wl/word_ladder_test
 ```  
 
-* Step 7: IDE
+* Step 5: IDE
   * Make sure you're using a capable IDE, e.g.
     * VSCode
     * CLion
