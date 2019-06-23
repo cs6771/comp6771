@@ -27,8 +27,7 @@
 ### Mac OSX
 * Install Bazel
   ```bash
-    brew tap bazelbuild/tap
-    brew install bazelbuild/tap/bazel
+    brew install bazel
     bazel --version # Testing if bazel works
   ```
 
@@ -56,6 +55,12 @@
     bazel build //assignments/wl:word_ladder_test
     ./bazel-bin/assignments/wl/word_ladder_test
   ```  
+
+* Step 6: IDE
+  * Make sure you're using a capable IDE, e.g.
+    * VSCode
+    * CLion
+  * If you struggle with the setup, use a text editor in the interim (Atom, Sublime)
 
 # Optional (Setting up an IDE)
 
