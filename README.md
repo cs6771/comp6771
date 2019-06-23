@@ -1,4 +1,75 @@
-# Option 1: Use our virtual machine (supported)
+# Required steps
+
+## Step 1 (Operating system dependent)
+
+### Linux
+* Open a terminal
+* Install Bazel and clang-tools
+```bash
+  sudo apt-get install bazel clang-tools
+  bazel version # Testing if bazel works
+```
+* Ensure GDB is installed
+```bash
+  sudo apt-get install gdb
+  gdb --version
+```
+
+### Windows
+* If you haven't already, install a debian-based WSL for Windows
+  * E.G. https://www.microsoft.com/en-au/p/ubuntu-1804-lts/9n9tngvndl3q?rtc=1&activetab=pivot:overviewtab
+* Go to the start menu and open "Ubuntu". You will be given a terminal. NOTE: THIS IS THE TERMINAL YOU WILL BE USING, NOT the windows terminal.
+* Install Bazel
+```bash
+  sudo apt-get install bazel clang-tools
+  bazel version # Testing if bazel works
+```
+* Ensure GDB is installed
+```bash
+  sudo apt-get install gdb
+  gdb --version
+```
+
+### Mac OSX
+* Install Bazel and clang-tools
+```bash
+  brew install bazel llvm
+  bazel version # Testing if bazel works
+```
+* Ensure GDB is installed
+```bash
+  brew install gdb
+  gdb --version
+```
+
+## Steps 3-6 (All operating systems)
+* Step 3: Clone the repository
+```bash
+  git clone https://github.com/cs6771/comp6771 ~/comp6771
+```  
+
+* Step 5: Test you can build & run your code
+```bash
+  bazel build //assignments/wl:main
+  bazel run //assignments/wl:main # Option 1
+  ./bazel-bin/assignments/wl/word_ladder_test # Option 2
+```  
+
+* Step 6: Test you can build & run your tests
+```bash
+  bazel build //assignments/wl:word_ladder_test
+  ./bazel-bin/assignments/wl/word_ladder_test
+```  
+
+* Step 7: IDE
+  * Make sure you're using a capable IDE, e.g.
+    * VSCode
+    * CLion
+  * If you struggle with the setup, use a text editor in the interim (Atom, Sublime)
+
+# Optional (Setting up an IDE)
+
+## Option 1: CLion - via the provided Linux Virtual Machine
 * Install virtualbox (exact installation instructions depend on your OS)
 * [Download our virtual machine](http://tiny.cc/comp6771vm) we've created for you. It has everything set up. Run it with virtualbox. The password is "comp6771".
 * In virtualbox, file > import appliance > the file you downloaded. Make sure you set the CPU and RAM to something appropriate for your machine.
@@ -11,16 +82,7 @@
 url = https://github.com/cs6771/comp6771  # New
 ```
 
-# Option 2: Linux - Install the same configuration as the virtual machine (mostly supported)
-We *may* help you with this, depending on how much work it is, or we may tell you to just use the VM.
-
-## Required Installations
-* Install clang-format
-  * `sudo apt install clang-format`
-* [Download and install bazel](https://docs.bazel.build/versions/master/install-ubuntu.html)
-* Ensure that are using gcc version 8 (supporting C++17).
-
-## Installing and configuring Clion (optional, but recommended)
+## Option 2: CLion - Linux 
 We will be using clion during the lectures. Use a different IDE or editor if you prefer, but do so at your own risk.
 
 Download and install clion from [jetbrains website](https://www.jetbrains.com/clion/download/). Sign up using your student email to get a free copy.
@@ -41,12 +103,8 @@ After that is complete:
 * Import your project:
   * Clion menu: File > import bazel project > course repository
 
-# Option 3 (completely unsupported)
+## Option 3: VSCode - Windows & OSX
 
-## Windows 10
-* Make sure that you have the 19H1 update installed
-  * Might work on older version, but you need to transform linux paths to windows paths
-  * Tested using the Ubuntu distro for WSL
 ### Setting Up Environment
 * Install Visual Studio Code - Insiders
 * Install these VS Code Extensions:
@@ -61,7 +119,6 @@ After that is complete:
 * Install Bazel on WSL:
   * https://docs.bazel.build/versions/master/install-ubuntu.html
 ### Editing
-* On WSL:
   * Clone this git repo
   * cd to cloned repo directory
   * code-insiders ./
@@ -74,7 +131,7 @@ After that is complete:
 * Select "Bazel: Build Target" if you want to build single targets.
 ### Running
 * Open terminal
-* Navigate to the root of the repository
+* Navigate to the project root folder
 * Example: 
   ```bash
     bazel build //lectures/week1:factorial
@@ -148,7 +205,7 @@ After that is complete:
   }
   ```
   
-## Using Clang-Tools outside of CLion
+### Using Clang-Tools outside of CLion
 
 To use tools such as `clang-tidy`, `clang-format` outside of CLion, 
 or to use alternative IDEs relying on tools such as `clangd` or `rtags`, 
