@@ -5,56 +5,56 @@
 ### Linux
 * Open a terminal
 * Install Bazel
-  ```bash
-    cd ~/Downloads
-    wget https://github.com/bazelbuild/bazel/releases/download/0.27.0/bazel_0.27.0-linux-x86_64.deb
-    sudo dpkg -i ./https://github.com/bazelbuild/bazel/releases/download/0.27.0/bazel_0.27.0-linux-x86_64.deb
-    bazel --version # Testing if bazel works
-  ```
+```bash
+  cd ~/Downloads
+  wget https://github.com/bazelbuild/bazel/releases/download/0.27.0/bazel_0.27.0-linux-x86_64.deb
+  sudo dpkg -i ./https://github.com/bazelbuild/bazel/releases/download/0.27.0/bazel_0.27.0-linux-x86_64.deb
+  bazel --version # Testing if bazel works
+```
 
 ### Windows
 * If you haven't already, install a debian-based WSL for Windows
   * E.G. https://www.microsoft.com/en-au/p/ubuntu-1804-lts/9n9tngvndl3q?rtc=1&activetab=pivot:overviewtab
 * Go to the start menu and open "Ubuntu". You will be given a terminal.
 * Install Bazel
-  ```bash
-    cd ~/Downloads
-    wget https://github.com/bazelbuild/bazel/releases/download/0.27.0/bazel_0.27.0-linux-x86_64.deb
-    sudo dpkg -i ./https://github.com/bazelbuild/bazel/releases/download/0.27.0/bazel_0.27.0-linux-x86_64.deb
-    bazel --version # Testing if bazel works
-  ```
+```bash
+  cd ~/Downloads
+  wget https://github.com/bazelbuild/bazel/releases/download/0.27.0/bazel_0.27.0-linux-x86_64.deb
+  sudo dpkg -i ./https://github.com/bazelbuild/bazel/releases/download/0.27.0/bazel_0.27.0-linux-x86_64.deb
+  bazel --version # Testing if bazel works
+```
 
 ### Mac OSX
 * Install Bazel
-  ```bash
-    brew install bazel
-    bazel --version # Testing if bazel works
-  ```
+```bash
+  brew install bazel
+  bazel --version # Testing if bazel works
+```
 
 ## Steps 2-5 (All operating systems)
 * Step 2: Clone the repository
-  ```bash
-    git clone https://github.com/cs6771/comp6771 ~/comp6771
-  ```  
+```bash
+  git clone https://github.com/cs6771/comp6771 ~/comp6771
+```  
 
 * Step 3: Install clang-tools
-  ```bash
-    sudo apt install clang-tools
-    clang-format -i ~/comp6771/lectures/week1/factorial.cpp # Testing if it works
-  ```  
+```bash
+  sudo apt install clang-tools
+  clang-format -i ~/comp6771/lectures/week1/factorial.cpp # Testing if it works
+```  
 
 * Step 4: Test you can build & run your code
-  ```bash
-    bazel build //assignments/wl:main
-    bazel run //assignments/wl:main # Option 1
-    ./bazel-bin/assignments/wl/word_ladder_test # Option 2
-  ```  
+```bash
+  bazel build //assignments/wl:main
+  bazel run //assignments/wl:main # Option 1
+  ./bazel-bin/assignments/wl/word_ladder_test # Option 2
+```  
 
 * Step 5: Test you can build & run your tests
 ```bash
-    bazel build //assignments/wl:word_ladder_test
-    ./bazel-bin/assignments/wl/word_ladder_test
-  ```  
+  bazel build //assignments/wl:word_ladder_test
+  ./bazel-bin/assignments/wl/word_ladder_test
+```  
 
 * Step 6: IDE
   * Make sure you're using a capable IDE, e.g.
