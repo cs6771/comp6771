@@ -4,9 +4,9 @@
 
 ### Linux
 * Open a terminal
-* Install Bazel
+* Install Bazel and clang-tools
 ```bash
-  sudo apt-get install bazel
+  sudo apt-get install bazel clang-tools
   bazel version # Testing if bazel works
 ```
 * Ensure GDB is installed
@@ -21,7 +21,7 @@
 * Go to the start menu and open "Ubuntu". You will be given a terminal. NOTE: THIS IS THE TERMINAL YOU WILL BE USING, NOT the windows terminal.
 * Install Bazel
 ```bash
-  sudo apt-get install bazel
+  sudo apt-get install bazel clang-tools
   bazel version # Testing if bazel works
 ```
 * Ensure GDB is installed
@@ -31,9 +31,9 @@
 ```
 
 ### Mac OSX
-* Install Bazel
+* Install Bazel and clang-tools
 ```bash
-  brew install bazel
+  brew install bazel llvm
   bazel version # Testing if bazel works
 ```
 * Ensure GDB is installed
@@ -46,12 +46,6 @@
 * Step 3: Clone the repository
 ```bash
   git clone https://github.com/cs6771/comp6771 ~/comp6771
-```  
-
-* Step 4: Install clang-tools
-```bash
-  sudo apt-get install clang-tools
-  clang-format -i ~/comp6771/lectures/week1/factorial.cpp # Testing if it works
 ```  
 
 * Step 5: Test you can build & run your code
