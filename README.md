@@ -75,7 +75,7 @@
 
 # Optional (Setting up an IDE)
 
-## Option 1: CLion - via the provided Virtual Machine
+## Option 1: CLion - via the provided Linux Virtual Machine
 * Install virtualbox (exact installation instructions depend on your OS)
 * [Download our virtual machine](http://tiny.cc/comp6771vm) we've created for you. It has everything set up. Run it with virtualbox. The password is "comp6771".
 * In virtualbox, file > import appliance > the file you downloaded. Make sure you set the CPU and RAM to something appropriate for your machine.
@@ -109,11 +109,7 @@ After that is complete:
 * Import your project:
   * Clion menu: File > import bazel project > course repository
 
-## Option 3: VSCode - Mac OSX
-* We do not have any formal support or info for setting up an IDE with OSX.
-* Please try and follow the general approach of the windows instructions below
-
-## Option 4: VSCode - Windows
+## Option 3: VSCode - Windows & OSX
 
 ### Setting Up Environment
 * Install Visual Studio Code - Insiders
@@ -129,7 +125,6 @@ After that is complete:
 * Install Bazel on WSL:
   * https://docs.bazel.build/versions/master/install-ubuntu.html
 ### Editing
-* On WSL:
   * Clone this git repo
   * cd to cloned repo directory
   * code-insiders ./
@@ -142,7 +137,7 @@ After that is complete:
 * Select "Bazel: Build Target" if you want to build single targets.
 ### Running
 * Open terminal
-* Navigate to the root of the repository
+* Navigate to the project root folder
 * Example: 
   ```bash
     bazel build //lectures/week1:factorial
