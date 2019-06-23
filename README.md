@@ -9,15 +9,25 @@
   sudo apt-get install bazel
   bazel version # Testing if bazel works
 ```
+* Ensure GDB is installed
+```bash
+  sudo apt-get install gdb
+  gdb --version
+```
 
 ### Windows
 * If you haven't already, install a debian-based WSL for Windows
   * E.G. https://www.microsoft.com/en-au/p/ubuntu-1804-lts/9n9tngvndl3q?rtc=1&activetab=pivot:overviewtab
-* Go to the start menu and open "Ubuntu". You will be given a terminal.
+* Go to the start menu and open "Ubuntu". You will be given a terminal. NOTE: THIS IS THE TERMINAL YOU WILL BE USING, NOT the windows terminal.
 * Install Bazel
 ```bash
   sudo apt-get install bazel
   bazel version # Testing if bazel works
+```
+* Ensure GDB is installed
+```bash
+  sudo apt-get install gdb
+  gdb --version
 ```
 
 ### Mac OSX
@@ -26,33 +36,38 @@
   brew install bazel
   bazel version # Testing if bazel works
 ```
+* Ensure GDB is installed
+```bash
+  brewinstall gdb
+  gdb --version
+```
 
-## Steps 2-5 (All operating systems)
-* Step 2: Clone the repository
+## Steps 3-6 (All operating systems)
+* Step 3: Clone the repository
 ```bash
   git clone https://github.com/cs6771/comp6771 ~/comp6771
 ```  
 
-* Step 3: Install clang-tools
+* Step 4: Install clang-tools
 ```bash
   sudo apt-get install clang-tools
   clang-format -i ~/comp6771/lectures/week1/factorial.cpp # Testing if it works
 ```  
 
-* Step 4: Test you can build & run your code
+* Step 5: Test you can build & run your code
 ```bash
   bazel build //assignments/wl:main
   bazel run //assignments/wl:main # Option 1
   ./bazel-bin/assignments/wl/word_ladder_test # Option 2
 ```  
 
-* Step 5: Test you can build & run your tests
+* Step 6: Test you can build & run your tests
 ```bash
   bazel build //assignments/wl:word_ladder_test
   ./bazel-bin/assignments/wl/word_ladder_test
 ```  
 
-* Step 6: IDE
+* Step 7: IDE
   * Make sure you're using a capable IDE, e.g.
     * VSCode
     * CLion
