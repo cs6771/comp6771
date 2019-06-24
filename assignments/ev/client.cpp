@@ -17,11 +17,11 @@ int main() {
   // use the copy constructor
   EuclideanVector f{e};
 
-  std::cout << a.getNumDimensions() << ": " << a << '\n';
+  std::cout << a.GetNumDimensions() << ": " << a << '\n';
   std::cout << "D1:" << b.at(1) << " " << b << '\n';
-  std::cout << c << " Euclidean Norm = " << c.getEuclideanNorm() << '\n';
-  std::cout << d << " Unit Vector: " << d.createUnitVector()
-            << " L = " << d.createUnitVector().getEuclideanNorm() << '\n';
+  std::cout << c << " Euclidean Norm = " << c.GetEuclideanNorm() << '\n';
+  std::cout << d << " Unit Vector: " << d.CreateUnitVector()
+            << " L = " << d.CreateUnitVector().GetEuclideanNorm() << '\n';
   std::cout << e << '\n';
   std::cout << f << '\n';
 
@@ -64,7 +64,4 @@ int main() {
     std::cout << d << '\n';
   }
 
-  // list initialisation
-  EuclideanVector k{1, 2, 3};
-  std::cout << k << '\n';
 }
