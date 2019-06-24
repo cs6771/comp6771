@@ -3,7 +3,7 @@
 #include <vector>
 #include <utility>
 
-#include "EuclideanVector.h"
+#include "euclidean_vector.h"
 
 int main() {
   EuclideanVector a(2);
