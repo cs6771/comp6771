@@ -1,10 +1,10 @@
 #include <iostream>
 #include <vector>
+#include <utility>
 
-#include "euclidean_vector.h"
+#include "assignments/ev/euclidean_vector.h"
 
 int main() {
-
   EuclideanVector a(2);
 
   std::vector<double> l{1, 2, 3};
@@ -23,7 +23,7 @@ int main() {
   EuclideanVector f{e};
 
   std::cout << a.GetNumDimensions() << ": " << a << '\n';
-  std::cout << "D1:" << b.Get(1) << " " << b << '\n';
+  std::cout << "D1:" << b.at(1) << " " << b << '\n';
   std::cout << c << " Euclidean Norm = " << c.GetEuclideanNorm() << '\n';
   std::cout << d << " Unit Vector: " << d.CreateUnitVector()
             << " L = " << d.CreateUnitVector().GetEuclideanNorm() << '\n';
