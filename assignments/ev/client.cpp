@@ -60,9 +60,6 @@ int main() {
   std::cout << j << '\n';
 
   // type cast from EuclideanVector to a std::vector
-  std::vector<double> vj = j;
-
-  // type cast from EuclideanVector to a std::vector
   std::vector<double> lj = j;
 
   for (auto d : lj) {
