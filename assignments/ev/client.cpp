@@ -1,18 +1,23 @@
 #include <iostream>
-#include <list>
 #include <vector>
 #include <utility>
 
-#include "euclidean_vector.h"
+#include "assignments/ev/euclidean_vector.h"
 
 int main() {
   EuclideanVector a(2);
+
+  std::vector<double> l{1, 2, 3};
+  EuclideanVector b{l.begin(), l.end()};
 
   std::vector<double> v2{4, 5, 6, 7};
   EuclideanVector c{v2.begin(), v2.end()};
 
   std::vector<double> a1{5, 4, 3, 2, 1};
   EuclideanVector d{a1.begin(), a1.end()};
+
+  std::vector<double> a2{9, 0, 8, 6, 7};
+  EuclideanVector e{a2.begin(), a2.end()};
 
   // use the copy constructor
   EuclideanVector f{e};
@@ -55,13 +60,9 @@ int main() {
   std::cout << j << '\n';
 
   // type cast from EuclideanVector to a std::vector
-  std::vector<double> vj = j;
-
-  // type cast from EuclideanVector to a std::vector
-  std::list<double> lj = j;
+  std::vector<double> lj = j;
 
   for (auto d : lj) {
     std::cout << d << '\n';
   }
-
 }
