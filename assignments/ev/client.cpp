@@ -26,12 +26,8 @@ int main() {
   std::cout << "D1:" << b.at(1) << " " << b << '\n';
   std::cout << c << " Euclidean Norm = " << c.GetEuclideanNorm() << '\n';
   
-  try {
-	  std::cout << d << " Unit Vector: " << d.CreateUnitVector()
-	            << " L = " << d.CreateUnitVector().GetEuclideanNorm() << '\n';
-  } catch (const EuclideanVectorError& e) {
-  	std::cerr << e.what();
-  }
+  std::cout << d << " Unit Vector: " << d.CreateUnitVector()
+            << " L = " << d.CreateUnitVector().GetEuclideanNorm() << '\n';
   std::cout << e << '\n';
   std::cout << f << '\n';
 
