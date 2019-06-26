@@ -25,8 +25,13 @@ int main() {
   std::cout << a.GetNumDimensions() << ": " << a << '\n';
   std::cout << "D1:" << b.at(1) << " " << b << '\n';
   std::cout << c << " Euclidean Norm = " << c.GetEuclideanNorm() << '\n';
-  std::cout << d << " Unit Vector: " << d.CreateUnitVector()
-            << " L = " << d.CreateUnitVector().GetEuclideanNorm() << '\n';
+  
+  try {
+	  std::cout << d << " Unit Vector: " << d.CreateUnitVector()
+	            << " L = " << d.CreateUnitVector().GetEuclideanNorm() << '\n';
+  } catch (const EuclideanVectorError& e) {
+  	std::cerr << e.what();
+  }
   std::cout << e << '\n';
   std::cout << f << '\n';
 
