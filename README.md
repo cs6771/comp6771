@@ -61,7 +61,13 @@
   ./bazel-bin/assignments/wl/word_ladder_test
 ```  
 
-* Step 5: IDE
+* Step 5: Using GDB
+```bash
+  bazel build -c dbg //assignments/wl:main
+  gdb ./bazel-bin/assignments/wl/main
+```
+
+* Step 6: IDE
   * Make sure you're using a capable IDE, e.g.
     * VSCode
     * CLion
