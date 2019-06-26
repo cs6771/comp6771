@@ -60,7 +60,7 @@ int main() {
   std::cout << j << '\n';
 
   // type cast from EuclideanVector to a std::vector
-  std::vector<double> lj = j;
+  auto lj = std::vector<double>{j};
 
   for (auto d : lj) {
     std::cout << d << '\n';
