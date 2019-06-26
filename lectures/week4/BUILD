@@ -28,3 +28,9 @@ cc_binary(
     deps = [],
 )
 
+cc_binary(
+    name = "type",
+    srcs = ["type.cpp"],
+    deps = [],
+)
+
