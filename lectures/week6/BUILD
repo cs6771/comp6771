@@ -1,5 +1,5 @@
 cc_binary(
-    name = "int_list",
-    srcs = ["int_list.cpp"],
+    name = "int_stack",
+    srcs = ["int_stack.cpp"],
     deps = [],
 )

@@ -16,6 +16,8 @@ class IntStack {
     std::unique_ptr<Node> next;
   };
 
+  // Exercise to the reader once we've covered templates:
+  // Try making the const iterator and the non-const iterator with one class template.
   class Iterator {
    public:
     using iterator_category = std::forward_iterator_tag;
