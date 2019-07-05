@@ -7,9 +7,7 @@ SCENARIO() {
   GIVEN("A simple IntArray") {
     IntArray array{2};
 
-    THEN("The size should be correct") {
-      REQUIRE(array.size() == 2);
-    }
+    THEN("The size should be correct") { REQUIRE(array.size() == 2); }
 
     AND_THEN("The initial values should be 0") {
       REQUIRE(array.At(0) == 0);
@@ -19,9 +17,7 @@ SCENARIO() {
     WHEN("You modify the value returned by at") {
       array.At(1) = 10;
 
-      THEN("The value persists in the array") {
-        REQUIRE(array.At(1) == 10);
-      }
+      THEN("The value persists in the array") { REQUIRE(array.At(1) == 10); }
     }
   }
 
@@ -29,14 +25,14 @@ SCENARIO() {
     IntArray array{2};
     array.At(1) = 1;
 
-//    WHEN("You attempt to make a const reference to the array") {
-//      const auto& cref{array};
-//
-//      THEN("You can successfully index using the const reference") {
-//        REQUIRE(cref.At(0) == 0);
-//        REQUIRE(cref.At(1) == 1);
-//      }
-//    }
+    //    WHEN("You attempt to make a const reference to the array") {
+    //      const auto& cref{array};
+    //
+    //      THEN("You can successfully index using the const reference") {
+    //        REQUIRE(cref.At(0) == 0);
+    //        REQUIRE(cref.At(1) == 1);
+    //      }
+    //    }
 
     WHEN("You copy-construct the array") {
       auto copy{array};
@@ -88,9 +84,7 @@ SCENARIO() {
         REQUIRE(moved.At(1) == 1);
       }
 
-      AND_THEN("The original has no data") {
-        REQUIRE(from.size() == 0);
-      }
+      AND_THEN("The original has no data") { REQUIRE(from.size() == 0); }
     }
 
     WHEN("You move-assign the array") {
@@ -105,9 +99,7 @@ SCENARIO() {
         REQUIRE(moved.At(1) == 1);
       }
 
-      AND_THEN("The original has no data") {
-        REQUIRE(from.size() == 0);
-      }
+      AND_THEN("The original has no data") { REQUIRE(from.size() == 0); }
     }
   }
 }

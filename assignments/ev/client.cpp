@@ -1,6 +1,6 @@
 #include <iostream>
-#include <vector>
 #include <utility>
+#include <vector>
 
 #include "assignments/ev/euclidean_vector.h"
 

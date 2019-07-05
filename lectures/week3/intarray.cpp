@@ -17,4 +17,3 @@ int IntArray::size() const {
   // size_ is shorthand for this->size_.
   return size_;
 }
-

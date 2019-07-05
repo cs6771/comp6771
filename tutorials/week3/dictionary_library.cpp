@@ -15,5 +15,4 @@ std::vector<std::string> ToWordList(std::istream& input) {
 // TODO(tutors): Discuss why we don't just use std::cin and std::cout with respect to testing.
 void PrintValidWords(const std::vector<std::string>& valid_words,
                      std::istream& input,
-                     std::ostream& output) {
-}
+                     std::ostream& output) {}

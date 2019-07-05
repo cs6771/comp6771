@@ -10,7 +10,7 @@ int main() {
 
   // C++ style. This can be used like any other C++ container.
   // It has iterators, safe accesses, and it doesn't act like a pointer.
-  std::array<int, 3> ages{ 18, 19, 20 };
+  std::array<int, 3> ages{18, 19, 20};
 
   for (int i = 0; i < ages.size(); ++i) {
     std::cout << ages[i] << "\n";

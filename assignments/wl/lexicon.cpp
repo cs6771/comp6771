@@ -18,8 +18,7 @@ std::unordered_set<std::string> GetLexicon(const std::string& filename) {
     Error("Failed to open file");
   }
   std::unordered_set<std::string> lexicon;
-  std::copy(std::istream_iterator<std::string>(f), {},
-            std::inserter(lexicon, lexicon.end()));
+  std::copy(std::istream_iterator<std::string>(f), {}, std::inserter(lexicon, lexicon.end()));
   if (f.bad()) {
     Error("I/O error while reading");
   }

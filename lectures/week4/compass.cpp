@@ -1,15 +1,15 @@
 // Point.h:
 class Point {
-  public:
-    Point& operator+=(const Point& p);
-    Point& operator-=(const Point& p);
-    Point& operator*=(const Point& p);
-    Point& operator/=(const Point& p);
-    Point& operator*=(const int& i);
+ public:
+  Point& operator+=(const Point& p);
+  Point& operator-=(const Point& p);
+  Point& operator*=(const Point& p);
+  Point& operator/=(const Point& p);
+  Point& operator*=(const int& i);
 
-  private:
-    int x_;
-    int y_;
+ private:
+  int x_;
+  int y_;
 };
 
 // Point.cpp:
@@ -18,7 +18,11 @@ Point& Point::operator+=(const Point& p) {
   this->y_ += p.y_;
   return *this;
 }
-Point& Point::operator-=(const Point& p) { /* Should we do this one? */ }
-Point& Point::operator*=(const Point& p) { /* Should we do this one? */ }
-Point& Point::operator/=(const Point& p) { /* Should we do this one? */ }
-Point& Point::operator*=(const int& p) { /* Should we do this one? */ }
+Point& Point::operator-=(const Point& p) { /* Should we do this one? */
+}
+Point& Point::operator*=(const Point& p) { /* Should we do this one? */
+}
+Point& Point::operator/=(const Point& p) { /* Should we do this one? */
+}
+Point& Point::operator*=(const int& p) { /* Should we do this one? */
+}

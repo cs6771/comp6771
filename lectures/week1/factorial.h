@@ -4,4 +4,3 @@
 int Factorial(int number);
 
 #endif  // LECTURES_WEEK1_FACTORIAL_H_
-
