@@ -1,6 +1,12 @@
 cc_binary(
-    name = "smart",
-    srcs = ["smart.cpp"],
+    name = "operators",
+    srcs = ["operators.cpp"],
+    deps = [],
+)
+
+cc_binary(
+    name = "processes",
+    srcs = ["processes.cpp"],
     deps = [],
 )
 
