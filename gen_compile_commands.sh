@@ -2,7 +2,7 @@
 
 set -e
 
-RELEASE_VERSION=0.3.4
+RELEASE_VERSION=0.3.5
 DIRECTORY=./bazel-compilation-database-${RELEASE_VERSION}
 OPTS="--show_progress --show_loading_progress"
 
