@@ -10,13 +10,16 @@
 
 class Reader {
  public:
-  Reader(std::shared_ptr<std::string> text): text_(text), location_{0} {}
+  Reader(std::shared_ptr<std::string>& text): text_(text), location_{0} {}
   void advance() {
     ++location_;
   }
   bool atEnd() const {
     return location_ == text_->size();
   }
+  // Note: This is not a useful case for weak pointers. This situation
+  // would be better off with unique pointers + raw pointers. Weak pointers
+  // are only valuable if you're sure the object is still alive - which is not the case here
   std::weak_ptr<std::string> getText() const {
     return text_;
   }
@@ -29,6 +32,8 @@ class Reader {
     return ret.str();
   }
  private:
+  // Ideally this integer below would be a string::iterator instead of something
+  // that you have to iterate manually
   int location_;
   std::shared_ptr<std::string> text_;
 };
@@ -45,7 +50,7 @@ int main() {
     std::cin >> *text;
     for (int i = 0; i < n_readers; ++i) {
       Reader r = Reader(text);
-      readers.push_back(r);
+      readers.emplace_back(r);
     }
   }
 
