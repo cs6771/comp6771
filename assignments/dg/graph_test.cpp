@@ -8,7 +8,7 @@
 
 */
 
-#include "assignments/ev/euclidean_vector.h"
+#include "assignments/dg/graph.h"
 #include "catch.h"
 
 // TODO(students): Fill this in.
