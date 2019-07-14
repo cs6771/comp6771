@@ -11,6 +11,6 @@ class Graph {
 
 }
 
-#include "assignments/dg/graph.inc"
+#include "assignments/dg/graph.tpp"
 
 #endif  // ASSIGNMENTS_DG_GRAPH_H_

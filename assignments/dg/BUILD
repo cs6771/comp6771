@@ -1,6 +1,6 @@
 cc_library(
     name = "graph",
-    srcs = ["graph.h", "graph.inc"],
+    srcs = ["graph.h", "graph.tpp"],
     deps = [],
 )
 
