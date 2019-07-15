@@ -9,6 +9,9 @@ class Graph {
  private:
 };
 
+// Define your graph_iterator here
+// Define your graph_const_iterator here
+
 }
 
 #include "assignments/dg/graph.tpp"
