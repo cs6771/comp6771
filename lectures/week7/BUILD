@@ -1,11 +1,13 @@
-cc_binary(
+cc_library(
     name = "static",
-    srcs = ["static_use.cpp", "static.h"],
+    hdrs = ["static.h"],
     deps = [],
 )
 
 cc_binary(
-    name = "friend",
-    srcs = ["friend_use.cpp", "friend.h"],
-    deps = [],
+    name = "static_main",
+    srcs = ["static_use.cpp"],
+    deps = [
+        ":static",
+    ],
 )
