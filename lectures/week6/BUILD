@@ -40,8 +40,17 @@ cc_binary(
     deps = [],
 )
 
-cc_binary(
+cc_library(
     name = "stack",
-    srcs = ["stack.cpp", "stack.h", "stack.inc"],
+    srcs = [],
+    hdrs = ["stack.h", "stack.tpp"],
     deps = [],
+)
+
+cc_binary(
+    name = "stack_main",
+    srcs = ["stack.cpp"],
+    deps = [
+        ":stack",
+    ],
 )

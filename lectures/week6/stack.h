@@ -25,6 +25,6 @@ class Stack {
 
 // stack.h (continued)
 
-#include "lectures/week6/stack.inc"
+#include "lectures/week6/stack.tpp"
 
 #endif  // LECTURES_WEEK6_STACK_H_
