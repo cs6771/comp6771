@@ -3,9 +3,7 @@
 
 // Function definitions can have auto return types in C++17
 auto EqualsString([[maybe_unused]] const std::vector<std::string>& strings) {
-  return Catch::Predicate<RopeView>([] ([[maybe_unused]] const RopeView expected) {
-    return true;
-  });
+  return Catch::Predicate<RopeView>([]([[maybe_unused]] const RopeView expected) { return true; });
 }
 
 SCENARIO() {

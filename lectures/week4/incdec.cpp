@@ -1,17 +1,17 @@
 // RoadPosition.h:
 class RoadPosition {
-  public:
-    RoadPosition(int km) : km_from_sydney_(km) {}
-    RoadPosition& operator++();      // prefix
-    // This is *always* an int, no
-    // matter your type.
-    RoadPosition operator++(int);   // postfix
-    void tick();
-    int km() { return km_from_sydney_; }
+ public:
+  explicit RoadPosition(int km) : km_from_sydney_(km) {}
+  RoadPosition& operator++();  // prefix
+  // This is *always* an int, no
+  // matter your type.
+  RoadPosition operator++(int);  // postfix
+  void tick();
+  int km() { return km_from_sydney_; }
 
-  private:
-    void tick_();
-    int km_from_sydney_;
+ private:
+  void tick_();
+  int km_from_sydney_;
 };
 
 // RoadPosition.cpp:
@@ -27,7 +27,7 @@ RoadPosition RoadPosition::operator++(int) {
 }
 void RoadPosition::tick_() {
   ++(this->km_from_sydney_);
-} 
+}
 
 int main() {
   RoadPosition rp{5};
