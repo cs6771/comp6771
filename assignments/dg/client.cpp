@@ -5,7 +5,6 @@
 
 // Note: At the moment, there is no client.sampleout. Please do your own testing
 
-
 int main() {
   gdwg::Graph<std::string, int> g;
   g.InsertNode("hello");
@@ -25,7 +24,7 @@ int main() {
   std::cout << g << '\n';
 
   gdwg::Graph<std::string, int> g2{g};
-  
+
   std::cout << g2 << "\n";
 
   // This is a structured binding.
