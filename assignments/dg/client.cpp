@@ -1,3 +1,5 @@
+// Note: At the moment, there is no client.sampleout. Please do your own testing
+
 #include <string>
 
 #include "assignments/dg/graph.h"
