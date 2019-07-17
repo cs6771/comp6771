@@ -6,7 +6,8 @@ namespace gdwg {
 template<typename N, typename E>
 class Graph {
  public:
-  // Define your graph_const_iterator here
+  class const_iterator {
+  };
  private:
 };
 
