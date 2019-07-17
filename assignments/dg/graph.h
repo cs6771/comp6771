@@ -3,16 +3,15 @@
 
 namespace gdwg {
 
-template<typename N, typename E>
+template <typename N, typename E>
 class Graph {
  public:
-  class const_iterator {
-  };
+  class const_iterator {};
+
  private:
 };
 
-
-}
+}  // namespace gdwg
 
 #include "assignments/dg/graph.tpp"
 
