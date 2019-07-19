@@ -19,13 +19,13 @@ class BookSale {
   // operations on BookSale objects
   const std::string& getBookName();
   BookSale& combine(const BookSale&);
-  double revenue();
+  double revenue() const;
 
  private:
   std::string book_name_;
   int units_sold_ = 0;  // in-class initialiser.
   double price_ = 0;    // in-class initialiser.
-  std::optional<double> revenueCache_;
+  mutable std::optional<double> revenueCache_;
 
   // Count how many objs are created by this constructor
   static int counter;

@@ -11,7 +11,7 @@ const std::string& BookSale::getBookName() {
   return book_name_;
 }
 
-double BookSale::revenue() {
+double BookSale::revenue() const {
   if (!revenueCache_) {
     revenueCache_ = units_sold_ * price_;
   }

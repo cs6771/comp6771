@@ -1,19 +1,20 @@
-#ifndef LECTURES_WEEK3_INTARRAY_H_
-#define LECTURES_WEEK3_INTARRAY_H_
+#ifndef LECTURES_WEEK3_INTARRAY_H
+#define LECTURES_WEEK3_INTARRAY_H
 
 #include <cassert>
 
 // A std::vector style type that can't be resized.
 class IntArray {
  public:
-  explicit IntArray(int size);
-  IntArray(const IntArray&) = default;
-  IntArray& operator=(const IntArray&) = default;
-  IntArray(IntArray&&) = default;
-  IntArray& operator=(IntArray&&) = default;
+  IntArray(int size);
+  IntArray(const IntArray&);
+  IntArray& operator=(const IntArray&);
+  IntArray(IntArray&&) noexcept;
+  IntArray& operator=(IntArray&&) noexcept;
   ~IntArray() noexcept;
 
   int& At(int i);
+  const int& At(int i) const;
   int size() const;
 
  private:
@@ -25,4 +26,4 @@ class IntArray {
   int size_;
 };
 
-#endif  // LECTURES_WEEK3_INTARRAY_H_
+#endif  // LECTURES_WEEK3_INTARRAY_H
