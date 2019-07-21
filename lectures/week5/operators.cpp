@@ -32,4 +32,7 @@ int main() {
 
   const Point p{99, -5};
   std::cout << (p[0] + 1) << "\n";
+
+  int* i = new int{5};
+  std::cout << *i << '\n';
 }

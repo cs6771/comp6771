@@ -1,5 +1,5 @@
-#ifndef LECTURES_WEEK7_STACK_H_
-#define LECTURES_WEEK7_STACK_H_
+#ifndef LECTURES_WEEK7_STATIC_H_
+#define LECTURES_WEEK7_STATIC_H_
 
 #include <vector>
 
@@ -26,4 +26,4 @@ Stack<T>::Stack() { numStacks_++; }
 template <typename T>
 Stack<T>:: ~Stack() { numStacks_--; }
 
-#endif  // LECTURES_WEEK7_STACK_H_
+#endif  // LECTURES_WEEK7_STATIC_H_
