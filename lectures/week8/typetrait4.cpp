@@ -6,8 +6,8 @@ struct is_pointer {
   static const bool val = false;
 };
 
-template<typename T>
-struct is_pointer <T*> {
+template <typename T>
+struct is_pointer<T*> {
   static const bool val = true;
 };
 

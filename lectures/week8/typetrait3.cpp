@@ -6,8 +6,8 @@ struct is_void {
   static const bool val = false;
 };
 
-template<>
-struct is_void <void> {
+template <>
+struct is_void<void> {
   static const bool val = true;
 };
 

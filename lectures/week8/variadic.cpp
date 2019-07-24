@@ -7,7 +7,7 @@ void print(const T& msg) {
 }
 
 template <typename A, typename... B>
-  void print(A head, B... tail) {
+void print(A head, B... tail) {
   print(head);
   print(tail...);
 }

@@ -8,10 +8,9 @@ class Stack {
   void push(T t) { stack_.push_back(t); }
   T& top() { return stack_.back(); }
   void pop() { stack_.pop_back(); }
-  int size() const { return stack_.size(); };
-  int sum() {
-    return std::accumulate(stack_.begin(), stack_.end(), 0);
-  }
+  int size() const { return stack_.size(); }
+  int sum() { return std::accumulate(stack_.begin(), stack_.end(), 0); }
+
  private:
   std::vector<T> stack_;
 };
@@ -22,11 +21,11 @@ class Stack<T*> {
   void push(T* t) { stack_.push_back(t); }
   T* top() { return stack_.back(); }
   void pop() { stack_.pop_back(); }
-  int size() const { return stack_.size(); };
+  int size() const { return stack_.size(); }
   int sum() {
-    return std::accumulate(stack_.begin(),
-       stack_.end(), 0, [] (int a, T *b) { return a + *b; });
+    return std::accumulate(stack_.begin(), stack_.end(), 0, [](int a, T* b) { return a + *b; });
   }
+
  private:
   std::vector<T*> stack_;
 };

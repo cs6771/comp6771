@@ -7,8 +7,7 @@ T myMin(T a, T b) {
 }
 
 template <>
-const std::string& myMin(const std::string& a,
-                       const std::string& b) {
+const std::string& myMin(const std::string& a, const std::string& b) {
   return a.size() < b.size() ? a : b;
 }
 

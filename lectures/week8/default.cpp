@@ -1,7 +1,7 @@
 #include <iostream>
 #include <vector>
 
-template <typename T, typename CONT = std::vector<T>>
+template <typename T, typename Cont = std::vector<T>>
 class Stack {
  public:
   Stack();
@@ -11,18 +11,23 @@ class Stack {
   T& top();
   const T& top() const;
   static int numStacks_;
+
  private:
-  CONT stack_;
+  Cont stack_;
 };
 
-template <typename T, typename CONT>
-int Stack<T, CONT>::numStacks_ = 0;
+template <typename T, typename Cont>
+int Stack<T, Cont>::numStacks_ = 0;
 
-template <typename T, typename CONT>
-Stack<T, CONT>::Stack() { numStacks_++; }
+template <typename T, typename Cont>
+Stack<T, Cont>::Stack() {
+  numStacks_++;
+}
 
-template <typename T, typename CONT>
-Stack<T, CONT>:: ~Stack() { numStacks_--; }
+template <typename T, typename Cont>
+Stack<T, Cont>::~Stack() {
+  numStacks_--;
+}
 
 int main() {
   Stack<float> fs;

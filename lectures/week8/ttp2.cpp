@@ -8,6 +8,7 @@ class Stack {
   void pop() { stack_.pop_back(); }
   T& top() { return stack_.back(); }
   bool empty() const { return stack_.empty(); }
+
  private:
   Cont<T> stack_;
 };
@@ -19,8 +20,8 @@ int main(void) {
   s1.push(i1);
   s1.push(i2);
   while (!s1.empty()) {
-  	std::cout << s1.top() << " ";
-  	s1.pop();
+    std::cout << s1.top() << " ";
+    s1.pop();
   }
   std::cout << "\n";
-} 
+}
