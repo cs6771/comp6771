@@ -1,19 +1,16 @@
 #include <iostream>
-#include <string>
 
 template <typename T>
-T myMin(T a, T b) {
-  return a < b ? a : b;
-}
+struct is_void {
+  static const bool val = false;
+};
 
-template <>
-const std::string& myMin(const std::string& a, const std::string& b) {
-  return a.size() < b.size() ? a : b;
-}
+template<>
+struct is_void<void> {
+  static const bool val = true;
+};
 
 int main() {
-  std::string s1{"hey"};
-  std::string s2{"apple"};
-  std::cout << myMin(s1, s2) << "\n";
-  std::cout << myMin(4, 3) << "\n";
+  std::cout << is_void<int>::val << "\n";
+  std::cout << is_void<void>::val << "\n";
 }

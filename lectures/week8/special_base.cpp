@@ -19,9 +19,9 @@ int main() {
   int i1 = 6771;
   int i2 = 1917;
 
-  Stack<int> s1;
-  s1.push(i1);
-  s1.push(i2);
+  Stack<int*> s1;
+  s1.push(&i1);
+  s1.push(&i2);
   std::cout << s1.size() << " ";
   std::cout << s1.top() << " ";
   std::cout << s1.sum() << "\n";

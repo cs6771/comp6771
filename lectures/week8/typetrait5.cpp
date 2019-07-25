@@ -12,6 +12,7 @@ void testIfNumberType(T i) {
               << "\n";
   }
 }
+
 int main() {
   int i = 6;
   uint64_t l = 7;
