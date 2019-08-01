@@ -3289,9 +3289,11 @@ def CheckSpacing(filename, clean_lines, linenum, nesting_state, error):
 
   # You shouldn't have spaces before your brackets, except maybe after
   # 'delete []' or 'return []() {};'
-  if Search(r'\w\s+\[', line) and not Search(r'(?:delete|return)\s+\[', line):
-    error(filename, linenum, 'whitespace/braces', 5,
-          'Extra space before [')
+  # Disable this as it turns out that this conflicts with clang-format for
+  # structured bindings.
+  # if Search(r'\w\s+\[', line) and not Search(r'(?:delete|return)\s+\[', line):
+  #   error(filename, linenum, 'whitespace/braces', 5,
+  #         'Extra space before [')
 
   # In range-based for, we wanted spaces before and after the colon, but
   # not around "::" tokens that might appear.
