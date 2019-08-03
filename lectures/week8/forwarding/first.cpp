@@ -15,5 +15,5 @@ int main() {
   std::cout << *my_make_unique<MyClass>(std::move(myClass)) << "\n";
   // Try adding these lines.
   //  NonCopyable nonCopyable{"NonCopyable"};
-  //  std::cout << *my_make_unique<NonCopyable>(std::move(nonCopyable)) << "\n\n";
+  std::cout << *my_make_unique<NonCopyable>(std::move(nonCopyable)) << "\n\n";
 }

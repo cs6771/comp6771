@@ -4,10 +4,10 @@
 #include <memory>
 
 // Our second attempt might look like this
-template <typename T, typename ArgT>
+/*template <typename T, typename ArgT>
 auto my_make_unique(const ArgT& arg) {
   return std::unique_ptr<T>{new T{arg}};
-}
+}*/
 
 // We then realise that we need this when our non-copyable type fails to compile.
 template <typename T, typename ArgT>
